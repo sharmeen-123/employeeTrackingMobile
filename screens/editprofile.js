@@ -118,16 +118,16 @@ export default function Editprofile(props) {
   const updateProfileImage = async () => {
 
 
-    // let filename = imageUri.substring(imageUri.lastIndexOf('/') + 1);
-    // setUploading(true);
-    // try{
-    //   await storage().ref(filename).putFile(imageUri);
-    //   setUploading(false)
-    //   console.log("your image has been uploaded to firebase")
+    let filename = imageUri.substring(imageUri.lastIndexOf('/') + 1);
+    setUploading(true);
+    try{
+      await storage().ref(filename).putFile(imageUri);
+      setUploading(false)
+      console.log("your image has been uploaded to firebase")
 
-    // }catch(e){
-    //   console.log(e);
-    // }
+    }catch(e){
+      console.log(e);
+    }
     // setImageUri('')
   }
   // const handleTakePhoto = () => {
